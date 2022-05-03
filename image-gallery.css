@@ -1,0 +1,65 @@
+
+h1{
+    text-align: center;
+    font-family: Raleway;
+}
+
+div.catalogue{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+div.item{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin: 0 2vw;
+    width: 300px;
+    max-height: 300px;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+div.item img{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+div.item.red {
+    color: red;
+    background-color: red;
+}
+div.item.green{
+    color: green;
+    background-color: green;
+}
+div.item.blue{
+    color: blue;
+    background-color: blue;
+}
+
+div.item i{
+    position: absolute;
+    background-color: rgb(169, 159, 159);
+    border: solid rgb(169, 159, 159) 5px;
+    border-radius: 50%;
+    transform: scale(0) rotate(0);
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+div.item:hover *{
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+div.item:hover i{
+    opacity: 0.4;
+    transform: scale(3.5) rotate(360deg);
+}
+
+div.item:hover img{
+    opacity: 0.8;
+    filter: grayscale(100%);
+}
